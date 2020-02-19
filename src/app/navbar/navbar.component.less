@@ -1,0 +1,87 @@
+@import '../helpers/constants.less';
+
+.function_button {
+  position: relative;
+  font-size: @14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  line-height: 2.6rem;
+  background-color: @color_white;
+
+  li {
+    flex: 1;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    height: @32px;
+    color: rgba(0, 0, 0, .6);
+    font-size: @14px;
+    &:active {
+      background: none;
+    }
+  }
+
+  .active {
+    span {
+      color: @main_color;
+      position: relative;
+      &:before{
+        content: '';
+        width: 2.4rem;
+        height: 2px;
+        border-radius: 1.5px;
+        background-color: @main_color;
+        position: absolute;
+        bottom: -.4rem;
+        left: -.2rem;
+      }
+    }
+  }
+}
+
+// 播放进度条
+.player_box {
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: @main_color;
+  }
+
+  .text_button {
+    display: flex;
+    justify-content: space-between;
+    padding: @14px;
+
+    .text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      line-height: @14px;
+
+      h2 {
+        font-size: @12px;
+        color: @black_color;
+        font-weight: normal;
+        margin: 0;
+      }
+
+      p {
+        font-size: @12px;
+        color: @main_color;
+      }
+    }
+
+    .player_button {
+      width: @22px;
+      height: @22px;
+      background: url('/assets/imgs/audio/icon_play_circle@2x.svg') 0 0 no-repeat;
+      background-size: @22px;
+    }
+  }
+}

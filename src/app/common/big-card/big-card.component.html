@@ -1,0 +1,11 @@
+<div class="big_card_box">
+  <div class="image_box">
+    <img [src]="picUrl" />
+  </div>
+  <div class="title_text_box">
+    <p class="name">{{name}}</p>
+    <p><span class="text_name">歌手</span>- {{singer}}</p>
+    <p><span class="text_name">{{durationTime/1000 | formatTime}}</span></p>
+    <div *ngIf="rank < 4" class="top_number">{{rank}}</div>
+  </div>
+</div>

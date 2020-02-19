@@ -1,0 +1,41 @@
+@import '../../helpers/constants.less';
+
+.big_card_box {
+  display: flex;
+  background-color: @color_white;
+  margin-top: @12px;
+
+  .image_box {
+    width: 6rem;
+    height: 6rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .title_text_box {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: @12px;
+    position: relative;
+
+    .text_name {
+      font-size: @12px;
+    }
+    .name{
+      font-weight: bold;
+    }
+    .top_number{
+      position: absolute;
+      top: 50%;
+      right: 1.4rem;
+      margin-top: -0.7rem;
+      color: @red;
+      font-size: @18px;
+    }
+  }
+
+}
